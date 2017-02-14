@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="jquery-3.1.1.slim.js" ></script>
+</head>
+<body>
+<p id="p1" style="color:yellow">csdcndsncjdncjxncjxbcdsc</p>
+  <div id="d1" style="background-color:yellow;width:300px;height:300px">cfdjsnafjjfvdjajfnsdjnjanf</div>
+<form >
+  <input type="text" id="t1" class="t11"><br><br>
+  <input type="text" id="t2" class="t11"><br><br>
+  <input type="text" id="t3" class="t11"><br><br>
+  <input type="text" id="t4" class="t11"><br><br>
+  <input type="button" value="btn1" id="b1"><br><br>
+  <input type="button" value="btn2" id="b2"><br><br>
+  <input type="button" value="btn3" id="b3"><br><br>
+  <input type="button" value="btn4" id="b4">
+</form>
+<script>
+
+$('#b1').click(function(){
+var x=$('#t1').val();
+alert(x);
+});
+
+$('#d1').on({
+  mouseenter:function() {
+    $(this).css("background-color","green");
+  },
+  mouseleave:function() {
+    $(this).css("background-color","red");
+  }
+});
+
+$('#b2').click(function() {
+  $('p').toggle();
+});
+/*
+$('#b3').click(function() {
+  $('#d1').animate({margin:'250px'});
+});
+$('#p1').css("color","red")
+.slideUp(2000).
+slideDown(2000);
+*/
+$('#b4').click(function(){
+  $('#p1').hide("slow",function(){
+    alert("paragraph is hidden");
+  });
+});
+
+$('#b3').click(function() {
+  alert($('a#mylink').attr("href"));
+});
+$('#p1').attr('color','green');
+$('#d1').empty();
+</script>
+<a href="#">a1</a>
+<a href="#">a2</a>
+<a>a3</a>
+</body>
+</html>
